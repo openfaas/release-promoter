@@ -1,0 +1,16 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  release-promoter:
+    lang: golang-middleware
+    handler: ./release-promoter
+    image: ${SERVER:-docker.io}/${OWNER:-alexellis2}/${REPO:-upload-release-promoter}:${TAG:-latest}
+    environment_file:
+    - production.env
+    secrets:
+    - release-promoter-private-key
+    - release-promoter-webhook
+
