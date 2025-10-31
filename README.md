@@ -2,6 +2,8 @@
 
 **Promote GitHub releases to latest when their uploads are published.**
 
+![Logo](/images/logo.png)
+
 You cut a release which will have binaries added only after the CI job is fully completed.
 
 ![](/images/before-pre.png)
