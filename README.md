@@ -18,6 +18,15 @@ The logs show the function receiving the webhook, and promoting the release.
 
 The example uses [alexellis/upload-assets-testing](https://github.com/alexellis/upload-assets-testing) but you can use this with any repository.
 
+## Why not add this to the build pipeline?
+
+1) You'll have to edit every single repository that you maintain to add your extra steps. If you want a minor alteration, you'll have to change them all again.
+2) GitHub Actions is the _wrong place_ to run automation or event-driven tasks. It should be used for CI/CD only. A single GitHub Action launch could both eat up your minutes quota, along with taking up to 10-15 seconds total latency. The function runs instantly on receiving the webhook.
+3) This stands as an example of how to run automation outside of GitHub Actions, and how to use OpenFaaS Functions to securely respond to events.
+4) This app can be hosted for your own use or for others. In both cases, finely grained access control is used which is only possible through a GitHub App.
+
+This can be blanket applied to organizations, an individual's whole user account - or select repositories. No changes to workflows are required.
+
 ### Getting the Release Promoter
 
 1) Install OpenFaaS into a VM or a Kubernetes cluster, then build and deploy your own version of this function with your own GitHub App.
