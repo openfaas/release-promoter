@@ -16,6 +16,13 @@ The logs show the function receiving the webhook, and promoting the release.
 
 ![](/images/logs-dashboard.png)
 
+The example uses [alexellis/upload-assets-testing](https://github.com/alexellis/upload-assets-testing) but you can use this with any repository.
+
+### Getting the Release Promoter
+
+1) Install OpenFaaS into a VM or a Kubernetes cluster, then build and deploy your own version of this function with your own GitHub App.
+2) Install our managed version using this link and our [hosted GitHub App](https://github.com/apps/release-promoter-function) running on OpenFaaS Edge - completely free with no ongoing costs or maintenance.
+
 ### About this code
 
 This is an OpenFaaS Function written with the [golang-middleware template](https://docs.openfaas.com/go).
