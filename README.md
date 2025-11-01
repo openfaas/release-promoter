@@ -1,5 +1,7 @@
 ## release-promoter
 
+[![build](https://github.com/openfaas/release-promoter/actions/workflows/build.yaml/badge.svg)](https://github.com/openfaas/release-promoter/actions/workflows/build.yaml)
+
 **Promote GitHub releases to latest when their uploads are published.**
 
 ![Logo](/images/logo.png)
