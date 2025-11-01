@@ -1,6 +1,7 @@
 ## release-promoter
 
 [![build](https://github.com/openfaas/release-promoter/actions/workflows/build.yaml/badge.svg)](https://github.com/openfaas/release-promoter/actions/workflows/build.yaml)
+[![OpenFaaS](https://img.shields.io/badge/openfaas-serverless-blue.svg)](https://www.openfaas.com)
 
 **Promote GitHub releases to latest when their uploads are published.**
 
