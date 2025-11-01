@@ -30,12 +30,11 @@ jobs:
         uses: docker/setup-buildx-action@v3
       - name: Get TAG
         id: get_tag
-        run: echo ::set-output name=TAG::latest-dev
+        run: echo "TAG=latest-dev" >> $GITHUB_OUTPUT
       - name: Get Repo Owner
         id: get_repo_owner
         run: >
-          echo ::set-output name=repo_owner::$(echo ${{ github.repository_owner }} |
-          tr '[:upper:]' '[:lower:]')
+          echo "repo_owner=$(echo ${{ github.repository_owner }} | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
       - name: Docker Login
         run: > 
           echo ${{secrets.GITHUB_TOKEN}} | 
