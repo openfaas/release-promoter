@@ -46,6 +46,7 @@ jobs:
         run: >
           OWNER="${{ steps.get_repo_owner.outputs.repo_owner }}" 
           TAG="latest"
+          SERVER="ghcr.io"
           faas-cli publish
           --extra-tag ${{ github.sha }}
           --extra-tag ${{ steps.get_tag.outputs.TAG }}

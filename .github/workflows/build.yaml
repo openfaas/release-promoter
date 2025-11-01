@@ -34,8 +34,7 @@ jobs:
         run: >
           OWNER="${{ steps.get_repo_owner.outputs.repo_owner }}" 
           TAG="latest"
-          faas-cli publish
-          --extra-tag ${{ github.sha }}
+          SERVER="ghcr.io"
+          faas-cli build
           --build-arg GO111MODULE=on
-          --platforms linux/amd64,linux/arm64
           --filter release-promoter
