@@ -36,7 +36,9 @@ GitHub Apps like this one can be blanket applied to organizations, an individual
 
 This is an OpenFaaS Function written with the [golang-middleware template](https://docs.openfaas.com/go).
 
-It can be deployed via `faas-cli up --publish --gateway https://gateway.example.com`.
+It can be deployed via `faas-cli deploy --gateway https://gateway.example.com`.
+
+To publish and deploy an edited version of the source code, run `SERVER=docker.io OWNER=YOUR_ACCOUNT faas-cli up --publish --tag=digest --gateway https://gateway.example.com` instead.
 
 You'll also need to create a GitHub App:
 

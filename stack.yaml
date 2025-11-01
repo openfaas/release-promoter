@@ -7,7 +7,7 @@ functions:
   release-promoter:
     lang: golang-middleware
     handler: ./release-promoter
-    image: ${SERVER:-docker.io}/${OWNER:-alexellis2}/${REPO:-upload-release-promoter}:${TAG:-latest}
+    image: ${SERVER:-ghcr.io}/${OWNER:-openfaas}/${REPO:-upload-release-promoter}:${TAG:-latest}
     environment_file:
     - production.env
     secrets:
